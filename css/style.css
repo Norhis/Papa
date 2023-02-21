@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --color-header: #f4efec;
+    --color-text: rgba(184, 202, 218, 0.952);
+    --gallery-gap: calc(var(--index) * 10)
+}
+
+@font-face {
+    font-family: "raleway-c";
+    src: url(../fonts/raleway-regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "outfit-c";
+    src: url(../fonts/Outfit-Regular.woff2) format("woff2");
+}
+
+h1,h2,h3,h4 {
+    font-family: "outfit-c";
+}
+
+p {
+    font-family: "raleway-c";
+}
+
+.content, .hero-saction, .main-header {
+    will-change: transform;
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-size: 50px;
+    color: rgba(184, 202, 218, 0.952);
+    overflow-x: hidden;
+}
+.hero {
+    width: calc(var(--index)*24);
+    position: absolute;
+    left: calc(var(--index)*28);
+    top: calc(var(--index)*2);
+}
+
+.main-header {
+    height: 100vh;
+}
+
+.container {
+    padding: 0 calc(var(--index)*1);
+}
+
+.main-title {
+    font-size: calc(var(--index)*6);
+    position: absolute;
+    width: min-content;
+    bottom: 23vh;
+    line-height: .96;
+    left: calc(var(--index)*10);
+}
+
+.gallery {
+    display: flex;
+    padding: calc(var(--index)*5) 0;
+}
+
+.gallery > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery__item {
+    max-width: calc(var(--index)*23);
+    margin-bottom: var(--gallery-gap);
+    max-height: 90vh;
+}
+
+.gallary__right {
+    margin: 0;
+    margin-top: calc(var(--gallery-gap)*1.34);
+}
+
+.text-block {
+    color: var(--color-header);
+    position: relative;
+    text-align: center;
+
+}
+.text-block__h {
+    font-size: 3rem;
+    line-height: 4.4rem;
+    color: var(--color-text);
+}
+.text-block__l {
+    font-size: 1.9rem;
+    line-height: 2.5rem;
+}
